@@ -1,61 +1,120 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
-.main {
+html {
+    font-size: 62.5%;
+}
+
+.hamburger-menu {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 3rem;
+    right: 5rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    /* box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2); */
+}
+
+.header {
     width: 100%;
     height: 100vh;
     position: relative;
+    perspective: 100rem;
     overflow: hidden;
-    background: #7da8aa;
 }
 
-.logo {
-    font-family: 'Rajdhani', sans-serif;
-    color: #d0dce7;
-    font-size: 50px;
-    margin-right: 20px;
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* opacity: 0.8; */
+    overflow: hidden;
 }
 
-nav {
-    width: 80%;
-    position: sticky;
-    margin: 20px auto;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.5; */
+    animation: scale 25s;
 }
 
-.nav-links {
-    flex: 1;
-    text-align: right;
-    border: 2px solid white;
+@keyframes scale {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Rajdhani', sans-serif;
-    color: #ccecf0;
-}
-
-.information {
-    width: 1000px;
-    height: 1000px;
+.banner {
     position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
+    top: 10%;
+    left: 10%;
 }
 
-.about {
-    font-size: 20px;
-    margin: 20px;
+.banner h1 {
+    font-size: 8rem;
+    font-weight: 300;
+    color: rgb(233, 223, 207);
+    font-family: 'Baloo Da 2', cursive;
+    width: 50%;
+    line-height: 9rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    animation: moveBanner 1s 0.5s;
+    forwards
+}
+
+.banner p {
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 15px;
+    color: rgb(233, 223, 207);
+    width: 30%;
+    margin-bottom: 3rem;
+    animation: moveBanner 1s 0.7s;
+    forwards
+}
+
+.banner button {
+    width: 170px;
+    height: 40px;
+    background-color: rgb(144, 174, 185);
+    border: 1px solid rgb(82, 78, 94);
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgb(238, 234, 218);
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    animation: moveBanner 1s 0.9s;
+    forwards
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(40rem) rotateY(-20deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
 }
