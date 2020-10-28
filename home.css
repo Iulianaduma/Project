@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #7da8aa;
+}
+
+.logo {
+    font-family: 'Rajdhani', sans-serif;
+    color: #d0dce7;
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+nav {
+    width: 80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    border: 2px solid white;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    color: #ccecf0;
+}
+
+.information {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+.about {
+    font-size: 20px;
+    margin: 20px;
+}
