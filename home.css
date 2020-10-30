@@ -26,7 +26,7 @@ html {
 }
 
 .change .hamburger-menu {
-    right: 130px;
+    right: 80px;
 }
 
 .line {
@@ -103,7 +103,7 @@ html {
 .banner h1 {
     font-size: 80px;
     font-weight: 300;
-    color: rgb(233, 223, 207);
+    color: rgb(26, 53, 53);
     font-family: 'Baloo Da 2' cursive;
     width: 50%;
     line-height: 90px;
@@ -114,26 +114,27 @@ html {
 
 .banner p {
     font-family: 'Baloo Da 2' cursive;
-    font-size: 15px;
-    color: rgb(233, 223, 207);
+    font-size: 20px;
+    color: rgb(43, 87, 87);
     width: 30%;
-    margin-bottom: 30px;
+    margin: 20px;
     animation: moveBanner 1s 0.7s forwards;
 }
 
 .banner button {
     width: 170px;
     height: 40px;
-    background-color: rgb(144, 174, 185);
-    border: 1px solid rgb(82, 78, 94);
+    background-color: rgb(148, 183, 196);
+    border: 1px solid rgb(60, 57, 68);
     font-family: 'Baloo Da 2', cursive;
     font-size: 20px;
     text-transform: uppercase;
-    color: rgb(238, 234, 218);
+    color: inherit;
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
     animation: moveBanner 1s 0.9s forwards;
+    text-decoration: none;
 }
 
 @keyframes moveBanner {
@@ -152,8 +153,10 @@ html {
     position: fixed;
     top: 0;
     right: -200px;
-    background-color: rgb(189, 210, 214);
+    background-color: rgb(203, 235, 241);
     transition: right 0.5s;
+    border-left: 2px solid rgb(95, 95, 119);
+    opacity: 0.7;
 }
 
 .change .nav-bar {
